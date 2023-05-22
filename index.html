@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="utf-8">
+    <title>Larry Moss</title>
+    <style>
+        body
+        {background: black;}
+        h1
+        {color: bisque;
+        font-family: Helvetica, sans-serif;
+        font-weight: 50;
+        font-size: 60px;
+        font-stretch: expanded;
+        margin-bottom: 0px;
+        position:absolute;
+        bottom: 50px;
+        left: 150px;
+        z-index: 1;
+        }
+        h2
+        {
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-weight: 50;
+        font-size: 25px;
+        font-stretch: expanded;
+        margin-bottom: 0px;
+        position:absolute;
+        bottom: 20px;
+        left: 150px;
+        z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lawrence S. Moss</h1>
+    <h2>Professor of Mathematics</h2>
+<!-- add images -->
+
+<img src="assets/aristotle.png" alt="Larry" style="height:600px;position:absolute;top:0px;left:0px">
+
+
+<div id="research_banner" style="position:absolute;top:50px;right:125px;">
+<img src="assets/research_banner.png" alt="Research" style="height:228px;position:relative;">
+</div>
+<div id="teaching_banner" style="position:absolute;top:250px;right:75px">
+<img src="assets/teaching_banner.png" alt="Teaching" 
+    style="height:228px;position:relative;">
+</div>
+<div id="service_banner" style="position:absolute;top:500px;right:25px">
+<img src="assets/service_banner.png" alt="Service" style="height:228px;position:relative;">
+</div>
+
+</body>
+<script>
+
+    var id = null;
+function myMove() {
+  var elem = document.getElementById("research_banner"); 
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+</html>
+
+
+
+
+
+
